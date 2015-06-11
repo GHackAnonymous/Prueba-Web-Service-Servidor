@@ -15,37 +15,10 @@ public class Querys {
         String sql = "";
         
         sql = sql + " SELECT ";
-        sql = sql + " `tabla_datos`.`id_datos`, `tabla_datos`.`nombre`,";
-        sql = sql + " `tabla_datos`.`apellido`,`tabla_datos`.`password`,";
-        sql = sql + " `tabla_datos`.`email` FROM `webserviceprueba1`.`tabla_datos`;";
+        sql = sql + " `ventas`.`id_Ventas`, `ventas`.`Producto`,";
+        sql = sql + " `ventas`.`Precio`,`ventas`.`Cantidad`";
+        sql = sql + " FROM `webserviceprueba1server`.`ventas`;";
         
         return sql;
     }
-    
-    public String InsertarUsuarioTablaDatos(String nombre, String apellido, String password, String email){
-        String sql = "";
-        
-        sql = sql + " INSERT INTO `webserviceprueba1`.`tabla_datos` ";
-        sql = sql + " (`nombre`,`apellido`,`password`,`email`)";
-        sql = sql + " VALUES('"+nombre+"','"+apellido+"','"+password+"','"+email+"');";
-        
-        return sql;
-    }
-    
-    public String ConsultarUsuario(String nombre, String password){
-        String sql = "";
-        
-        sql = sql + " SELECT ";
-        sql = sql + " `tabla_datos`.`nombre`, `tabla_datos`.`password`";
-        sql = sql + " FROM `webserviceprueba1`.`tabla_datos`";
-        sql = sql + " WHERE nombre = '"+nombre+"' AND";
-        sql = sql + " password = '"+password+"';";
-        
-        return sql;
-    }
-    
 }
-
-    
-    
-    

@@ -25,7 +25,7 @@ public class ConexionBD {
             } catch (IllegalAccessException ex) {Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, "Ilegal Access", ex);
             }
             if(!clave.equalsIgnoreCase("")){
-                conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/webserviceprueba1", usuario,clave); 
+                conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/webserviceprueba1server", usuario,clave); 
                 statment = conexion.createStatement();
 
                 return statment;
@@ -69,16 +69,4 @@ public class ConexionBD {
         System.out.println("ConxionBD: 5");
         return resultado;
     }
-    
-    public int InsertarUsuario(Statement conexion, String strSql) throws SQLException{
-    
-        int resultado = -1;
-        
-        synchronized(conexion){
-            resultado = conexion.executeUpdate(strSql);
-        }
-        return resultado;
-    }
-    
-    
 }
