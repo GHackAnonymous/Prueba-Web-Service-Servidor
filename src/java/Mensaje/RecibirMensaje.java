@@ -44,14 +44,14 @@ public class RecibirMensaje {
      * Web service operation
      */
     @WebMethod(operationName = "OperacionBD")
-    public Object[] OperacionBD(@WebParam(name = "Operacion") int Operacion) {
+    public ArrayList<Venta> OperacionBD(@WebParam(name = "Operacion") int Operacion) {
         //TODO write your implementation code here:
         
         Consultar c = new Consultar();
         
-        Object[] resultado;
-        
-        resultado = c.consultarVentas(Operacion);
+//        Object[] resultado;
+        ArrayList<Venta> resultado = c.consultarVentas(Operacion);
+//        resultado = c.consultarVentas(Operacion);
         
         return resultado;
     }

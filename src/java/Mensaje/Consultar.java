@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class Consultar {
     
-    public Object[] consultarVentas(int Operacion){
+    public ArrayList<Venta> consultarVentas(int Operacion){
     
         ResultSet resultadoBD = null;
         ArrayList resultadoOux = (ArrayList<Venta>) new ArrayList<Venta>();
@@ -87,11 +87,11 @@ public class Consultar {
                 
             break;
         }
-        if(resultadoOux.size() != 0){
-            Object[] resultado = resultadoOux.toArray();
-            return resultado;
-        }else{
-            return null;
-        }
+//        if(resultadoOux.size() != 0){
+//            Object[] resultado = resultadoOux.toArray();
+            return resultadoOux;
+//        }else{
+//            return null;
+//        }
     }  
 }
