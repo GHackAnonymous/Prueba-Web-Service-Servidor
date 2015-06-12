@@ -11,7 +11,7 @@ package BaseDatos;
  */
 public class Querys {
     
-    public String ConsultarTablaDatos(){
+    public String ConsultarTablaVentas(){
         String sql = "";
         
         sql = sql + " SELECT ";

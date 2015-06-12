@@ -5,6 +5,11 @@
  */
 package Mensaje;
 
+
+import BaseDatos.Venta;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -33,5 +38,21 @@ public class RecibirMensaje {
         //TODO write your implementation code here:
         System.out.println("Hello " + name + " !");
         return "Hello " + name + " !";
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "OperacionBD")
+    public Object[] OperacionBD(@WebParam(name = "Operacion") int Operacion) {
+        //TODO write your implementation code here:
+        
+        Consultar c = new Consultar();
+        
+        Object[] resultado;
+        
+        resultado = c.consultarVentas(Operacion);
+        
+        return resultado;
     }
 }
