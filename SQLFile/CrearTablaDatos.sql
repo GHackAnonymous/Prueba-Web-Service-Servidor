@@ -39,3 +39,21 @@ VALUES('Caja Reductora','140','1');
 
 INSERT INTO `webserviceprueba1server`.`ventas`(`Producto`,`Precio`,`Cantidad`)
 VALUES('RaspBerry Pi','50','3');
+
+-- --------------------
+-- Tabla_JuegoNumeros -
+-- --------------------
+
+CREATE TABLE `webserviceprueba1server`.`tabla_juegonumeros` (
+    `idJuego` INT NOT NULL AUTO_INCREMENT,
+    `users` VARCHAR(45) NOT NULL,
+    `puntuacion` INT NOT NULL,
+  PRIMARY KEY (`idJuego`));
+
+-- ------------------
+-- Insert de prueba -
+-- ------------------
+
+
+INSERT INTO `webserviceprueba1server`.`tabla_juegonumeros`(`users`,`puntuacion`)
+VALUES('User1',20);
